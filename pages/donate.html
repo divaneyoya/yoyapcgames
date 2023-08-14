@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo_marque.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/donate.css">
+    <title>Donate page</title>
+</head>
+<body onclick="closePhoneHeader()">
+
+    <div id="div-says-adress-copied">
+        <h2>the adress "<span id="adress-copied"></span>" has been successfully copied !</h2>
+    </div>
+
+    <!-- Header page -->
+    <header>
+        <div id="slide-parent">
+           <img src="../images/header_images/bg-site1.jpg" alt="">
+           <img src="../images/header_images/bg-site2.jpg" alt="">
+           <img src="../images/header_images/bg-site3.jpg" alt="">
+           <img src="../images/header_images/bg-site4.jpg" alt="">
+        </div>
+        <div id="header-info">
+           <h1>YOYA-PC <br><span>GAMES</span></h1>
+           <a href="../index.html"><img src="../images/yoyalogo.png" alt=""></a>
+           <div id="onglets">
+              <ul>
+                 <li><a href="../index.html">Home</a></li>
+                 <li><a href="console_page.html">Play</a></li>
+                 <li style="background: rgba(255, 255, 255, 0.411);"><a href="donate.html">Donate</a></li>
+                 <li><a href="earn_points.html">Earn Points</a></li>
+                 <li><a href="designs.html">Designs</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="contacts.html">Contacts</a></li>
+              </ul>
+           </div>
+           <div id="phone-menu" onclick="showPhoneHeader()">
+              <span></span>
+              <span></span>
+              <span></span>
+           </div>
+        </div>
+     </header>
+     <div id="header-on-phone">
+         <img src="../images/yoyalogo.png" alt="" onclick="window.location.href = '../index.html'">
+         <div>
+             <ul>
+                 <li><a href="../index.html">Home</a></li>
+                 <li><a href="console_page.html">Play</a></li>
+                 <li style="background: rgba(255, 255, 255, 0.411);"><a href="donate.html">Donate</a></li>
+                 <li><a href="earn_points.html">Earn Points</a></li>
+                 <li><a href="designs.html">Designs</a></li>
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="contacts.html">Contacts</a></li>
+             </ul>
+         </div>
+     </div>
+
+     <!-- Body page -->
+     <div id="donate">
+         <h3>
+            Don't hesitate to make a donation. It will really help us to improve our work and make you even more satisfied.
+            And thank you for your support!
+         </h3>
+         <div id="container-for-differents-types-of-donation">
+             <div id="donate-paypal">
+                <img src="../donate_images/paypal_image.png" alt="">
+                <b>**************@gmail.com</b>
+                <button>Donate Now</button>
+             </div>
+             <div id="donate-payeer">
+                <img src="../donate_images/payeer_image.png" alt="">
+                <b id="payeer-address">P46549468</b>
+                <button onclick="selectPayeerAdress()">Copy Address</button>
+             </div>
+             <div id="donate-perfect-money">
+                <img src="../donate_images/perfect_money_image.png" alt="">
+                <b id="perfect_money-address">P46541111</b>
+                <button onclick="selectPerfectMoneyAdress()">Copy Address</button>
+             </div>
+             <div id="donate-bitcoin">
+                <img src="../donate_images/bitcoin.png" alt="">
+                <b id="bitcoin-address">Bitcoin_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-bitcoinCash">
+                <img src="../donate_images/bitcoin_cash.png" alt="">
+                <b id="bitcoinCash-address">BitcoinCash_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-ethereum">
+                <img src="../donate_images/ethereum.png" alt="">
+                <b id="ethereum-address">ethereum_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-litecoin">
+                <img src="../donate_images/litecoin.png" alt="">
+                <b id="litecoin-address">litecoin_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-bnb">
+                <img src="../donate_images/bnb.png" alt="">
+                <b id="bnb-address">bnb_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-dogecoin">
+                <img src="../donate_images/doge.png" alt="">
+                <b id="dogecoin-address">dogecoin_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-trx">
+                <img src="../donate_images/tron.png" alt="">
+                <b id="trx-address">tron_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-usdt-trc20">
+                <img src="../donate_images/usdt_trc20.png" alt="">
+                <b id="usdt-trc20-address">usdt_trc20_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-usdt-erc20">
+                <img src="../donate_images/usdt_erc20.png" alt="">
+                <b id="usdt-erc20-address">usdt_erc20_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-shiba-erc20">
+                <img src="../donate_images/shiba_erc20.png" alt="">
+                <b id="shiba-erc20-address">shiba_erc20_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+             <div id="donate-shiba-bep20">
+                <img src="../donate_images/shiba_bep20.png" alt="">
+                <b id="shiba-bep20-address">shiba_bep20_P46541111</b>
+                <button>Copy Address</button>
+             </div>
+
+         </div>
+     </div>
+
+
+
+     <script src="../javascript/donate.js"></script>
+     <script src="../javascript/header.js" defer></script>
+</body>
+</html>

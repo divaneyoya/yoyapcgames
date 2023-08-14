@@ -1,0 +1,103 @@
+#div-says-adress-copied{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.473);
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#div-says-adress-copied h2{
+    background: linear-gradient(yellow, orangered);
+    padding: 5%;
+    box-shadow: 8px 8px 40px rgb(248, 174, 36);
+}
+
+
+#donate{
+    position: relative;
+    /* border: 2px solid; */
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 90px;
+}
+#donate h3{
+    font-size: 25px;
+    font-weight: bold;
+    /* border: 1px solid; */
+    letter-spacing: 2px;
+    padding: 1% 5%;
+    -webkit-text-stroke: 1px;
+    transform: scaleY(1.5);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.692);
+    background: linear-gradient(blue, red);
+    color: white;
+}
+#container-for-differents-types-of-donation{
+    /* border: 2px solid; */
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#container-for-differents-types-of-donation div{
+    /* border: 2px solid; */
+    min-width: 50%;
+    max-height: 20%;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    border-bottom: 2px dashed;
+    padding-bottom: 2%;
+    padding-top: 1%;
+}
+#container-for-differents-types-of-donation img{
+    /* border: 2px solid; */
+    width: 30%;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.486);
+    /* border-radius: 0 0 30% 0; */
+}
+#container-for-differents-types-of-donation button{
+    margin-left: 15px;
+    padding: 2%;
+    border: none;
+    background: rgb(0, 132, 255);
+    font-size: 17px;
+    font-weight: bold;
+    transform: scaleY(1.5);
+    color: white;
+    box-shadow: 3px 3px rgba(1, 42, 131, 0.651);
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+#container-for-differents-types-of-donation button:hover{
+    background: orangered;
+    box-shadow: none;
+}
+
+
+@media screen and (max-width: 915px){
+    #container-for-differents-types-of-donation img{
+        margin-right: 0;
+        margin-bottom: 7%;
+        width: 40%;
+    }
+    #container-for-differents-types-of-donation button{
+        margin-left: 0;
+        margin-top: 7%;
+        font-size: 12px;
+    }
+    #container-for-differents-types-of-donation div{
+        flex-direction: column;
+        border-bottom: 2px dashed;
+        gap: 5px;
+        padding-bottom: 7%;
+        padding-top: 4%;
+    }
+    #donate h3{
+        font-size: 14px;
+    }
+}

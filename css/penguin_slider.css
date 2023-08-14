@@ -1,0 +1,1223 @@
+html{
+    --pengBackGameStarted: 55s;
+    --pengGroundSlide: 6s;
+}
+
+
+#penguin-slider-div{
+    position: absolute;
+    /* border: 4px solid violet; */
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: fondu 5s linear;
+}
+@keyframes fondu {
+    0%{
+        opacity: 0;
+    }
+}
+#penguin-slider-intro{
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid gold; */
+}
+#background-images{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    /* border: 2px solid green; */
+    background-color: orange;
+    display: flex;
+    animation: backSlide 35s linear infinite;
+    gap: 0;
+}
+@keyframes backSlide {
+    100%{
+        transform: translateX(-200%);
+    }
+}
+.image-for-back{
+    /* position: absolute; */
+    object-fit: fill;
+    object-position: center;
+}
+.image-for-back:nth-child(1), .image-for-back:nth-child(2){
+    margin-right: -0.18%;
+}
+#background-images-water{
+    position: absolute;
+    /* border: 2px solid greenyellow; */
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    
+    display: flex;
+}
+@keyframes waterSlide {
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.images-water{
+    /* width: 100%; */
+    object-fit: fill;
+    object-position: center;
+    animation: waterSlide 2.5s linear infinite;
+}
+.images-water:nth-child(1), .images-water:nth-child(2){
+    margin-right: -0.2%;
+}
+
+@keyframes bougeIntro3 {
+    50%{
+        transform: translateY(10%);
+    }
+}
+.pengs-intro:nth-child(3){
+    /* animation-duration: 1.5s; */
+    animation: gros3 2.5s linear, bougeIntro3 1.2s linear infinite;
+}
+@keyframes gros3 {
+    0%{
+        transform: scale(3);
+        bottom: -50%;
+        left: -20%;
+    }
+}
+@keyframes bougeIntro4 {
+    50%{
+        transform: translateY(10%);
+    }
+}
+.pengs-intro:nth-child(4){
+    /* animation-duration: 1.5s; */
+    animation: gros4 2s linear, bougeIntro4 1.5s linear infinite;
+}
+@keyframes gros4 {
+    0%{
+        transform: scale(3);
+        top: -10%;
+        left: -20%;
+    }
+}
+
+@keyframes bougeIntro5 {
+    50%{
+        transform: translateY(10%);
+    }
+}
+.pengs-intro:nth-child(5){
+    /* animation-duration: 1.5s; */
+    animation: gros5 3s linear, bougeIntro5 2s linear infinite;
+}
+@keyframes gros5 {
+    0%{
+        transform: scale(3);
+        bottom: -50%;
+        right: -20%;
+    }
+}
+
+@keyframes bougeIntro6 {
+    50%{
+        transform: translateY(10%);
+    }
+}
+.pengs-intro:nth-child(6){
+    /* animation-duration: 1.5s; */
+    animation: gros6 3.5s linear, bougeIntro6 2.5s linear infinite;
+}
+@keyframes gros6 {
+    0%{
+        transform: scale(3);
+        top: -40%;
+        right: -20%;
+    }
+}
+
+#penguins-intro-select{
+    position: absolute;
+    /* border: 2px solid yellow; */
+    width: 50%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.466);
+    border-radius: 5%;
+    animation: showSelect 1.2s linear;
+}
+@keyframes showSelect {
+    0%{
+       opacity: 0;
+    }
+}
+#penguins-intro-select img{
+    width: 110%;
+}
+#penguins-intro-select ul{
+    font-weight: bold;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px;
+    color: white;
+}
+#penguins-intro-select ul li{
+    padding: 1% 0;
+    margin: 2% 0;
+    text-align: center;
+    transition: 0.2s ease;
+}
+#penguins-intro-select ul li:nth-child(1){
+    background: linear-gradient(to top, red, rgb(247, 180, 56));
+    color: black;
+    transform: scale(1.2);
+}
+#select-for-penguin-slider{
+    position: absolute; 
+    bottom: 3%; 
+    color: white;
+    text-shadow: 3px 3px 7px black;
+    animation: clineSelect 0.5s linear infinite;
+}
+@keyframes clineSelect {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+   }
+}
+
+#penguin-slider-game-start{
+    position: absolute;
+    /* border: 3px solid orange; */
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: gross 4s linear;
+}
+@keyframes gross {
+    0%{
+        opacity: 0;
+    }
+    19.99%{
+        opacity: 0;
+    }
+    20%{
+        transform: scale(5);
+    }
+    30%{
+        transform: scale(1);
+    }
+    95%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(10);
+    }
+}
+#penguin-slider-game-start img{
+    /* border: 2px solid red; */
+    object-fit: fill;
+    object-position: center;
+    /* width: 100%;
+    height: 300px;  */
+}
+
+#user-playing{
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    display: none;
+}
+
+
+#penguin-slider-game-started{
+    position: absolute;
+    /* border: 3px solid blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    animation: backgamestarted var(--pengBackGameStarted) linear infinite;
+}
+#penguin-slider-game-started img{
+    /* position: absolute; */
+    min-width: 100%;
+    height: 100%;
+    /* margin-left: -0.175%; */
+}
+@keyframes backgamestarted {
+    100%{
+        transform: translateX(/*-219%*/-200%);
+    }
+}
+
+
+#div-for-health-and-score{
+    position: absolute;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5%;
+    z-index: 20;
+}
+#div-for-health{
+    /* border: 2px solid; */
+    height: 100%;
+    width: 49%;
+    display: flex;
+}
+#penguin-profil{
+    border: 2px solid rgb(61, 10, 10);
+    height: 100%;
+    border-radius: 30% 0 30% 30%;
+    position: relative;
+}
+#bar-health-power{
+    /* border: 2px solid white; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#penguin-health{
+    border: 2px solid rgb(1, 95, 1);
+    background: red;
+    height: 30%;
+    width: 100%;
+    border-radius: 0 30px 30px 0;
+    overflow: hidden;
+    position: relative;
+}
+#penguin-health::before{
+    position: absolute;
+    content: "";
+    display: block;
+    /* border: 2px solid white; */
+    height: 35%;
+    width: 95%;
+    margin: 1% 2%;
+    background: rgba(255, 255, 255, 0.479);
+    border-radius: 0 30px 30px 0;
+}
+#penguin-power{
+    position: relative;
+    border: 2px solid rgb(2, 74, 168);
+    background: rgb(174, 196, 238);
+    height: 22%;
+    width: 80%;
+    border-radius: 0 30px 30px 0;
+    overflow: hidden;
+}
+#penguin-power::before{
+    position: absolute;
+    content: "";
+    display: block;
+    /* border: 2px solid white; */
+    height: 35%;
+    width: 95%;
+    margin: 1% 2%;
+    background: rgba(255, 255, 255, 0.432);
+    border-radius: 0 30px 30px 0;
+}
+#health{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(171, 228, 57), rgb(1, 95, 1));
+    transition: 0.5s ease;
+}
+#power{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(108, 184, 247), rgb(2, 57, 129));
+    transition: 0.5s ease;
+}
+#pausePengGame{
+    width: 12%;
+}
+
+
+#div-for-scores{
+    /* border: 2px solid green; */
+    width: 45%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 2% 0 0;
+    gap: 5%;
+}
+#div-for-scores div{
+    display: flex;
+    align-items: center;
+}
+#div-for-scores img{
+    width: 12%;
+    border-radius: 50%;
+    box-shadow: 2px 2px black;
+    position: relative;
+    margin-right: 1%;
+}
+#coins-points{
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(250, 79, 11);
+    text-shadow: 2px 2px black;
+}
+#score{
+    /* border: 2px solid red; */
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(243, 220, 13);
+    text-shadow: 2px 2px black;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#score span{
+    font-size: 22px;
+}
+
+
+#div-for-the-ground{
+    position: absolute;
+    /* border: 2px solid orange; */
+    bottom: 0;
+    height: 45%;
+    width: 100%;
+    display: flex;
+    animation: transGrown var(--pengGroundSlide) linear infinite;
+}
+#div-for-the-ground img{
+    min-width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* border: 2px solid; */
+}
+@keyframes transGrown {
+    100%{
+        transform: translateX(-400%);
+    }    
+}
+#divToCreateCollision{
+    transition: none;
+    position: absolute;
+    border: 2px solid blue;
+    height: 100%;
+    width: 5%;
+    left: -170%;
+}
+#another-div-for-background-object{
+    position: absolute;
+    /* border: 2px solid yellow; */
+    transition: 0.5s ease;
+    width: 100%;
+    height: 73%;
+    display: flex;
+    align-items: flex-end;
+    /* transform: translateX(100%); */
+    animation: transObject calc(var(--pengGroundSlide)/1.5) linear infinite;
+    left: 100%;
+}
+@keyframes transObject {
+    /* 100%{
+        transform: translateX(-165%);
+    } */
+    100%{
+        left: -165%;
+    }
+}
+
+#div-for-peng1{
+    /* border: 2px solid red; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* align-items: flex-end; */
+    /* border: 2px solid red;
+    position: absolute;
+    width: 29%;
+    height: 24%;
+    bottom: 14%;
+    left: 3%;
+    display: flex;
+    align-items: center; */
+    /* animation: showshow 1.1s linear; */
+}
+@keyframes showshow {
+    0%{
+        /* left: -25%; */
+    }
+}
+.sauter{
+    animation: saut 0.7s linear;
+}
+@keyframes saut {
+    40%{
+        bottom: 60%;
+    }
+    60%{
+        bottom: 55%;
+    }
+}
+@keyframes sauterr {
+    40%{
+        bottom: 60%;
+    }
+    60%{
+        bottom: 55%;
+    }
+}
+#peng1dust{
+    position: absolute;
+    width: 25%;
+    height: 17%;
+    bottom: 14%;
+    left: -5%;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+#initial-peng1{
+    /* border: 2px solid; */
+    position: absolute;
+    width: 25%;
+    height: 21%;
+    bottom: 14%;
+    left: 5%;
+    /* animation: peng1Bouge 1s linear infinite; */
+}
+@keyframes peng1Bouge {
+    50%{
+        margin-top: 4%;
+    }
+}
+#peng1Ghost{
+    position: absolute;
+    width: 25%;
+    height: 21%;
+    bottom: 14%;
+    left: 5%;
+    display: none;
+    /* animation: pengGhostAnim 0.65s linear infinite; */
+}
+@keyframes pengGhostAnim {
+    50%{
+        opacity: 10%;
+    }
+}
+#boule-peng1{
+    position: absolute;
+    width: 15%;
+    bottom: 14%;
+    left: 5%;
+    display: none;
+    animation: boule 0.55s linear infinite;
+}
+@keyframes boule {
+    50%{
+        transform: rotate(1000deg);
+        left: 85%;
+    }
+}
+#peng1-fatal1{
+    position: absolute;
+    width: 100%;
+    height: 33%;
+    bottom: 13%;
+    left: 5%;
+    display: none;
+    animation: f1Anim 0.65s linear infinite;
+}
+@keyframes f1Anim {
+    50%{
+        bottom: 9%;
+    }
+}
+#peng1-fatal2{
+    position: absolute;
+    width: 45%;
+    bottom: 4%;
+    left: 5%;
+    animation: fatal2 1.1s linear infinite;
+    display: none;
+}
+@keyframes fatal2 {
+    100%{
+        transform: rotate(1440deg);
+    }
+}
+
+#peng1Fatale1{
+    position: absolute;
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 21;
+    display: none;
+    background: linear-gradient(red, yellow, rgb(255, 102, 0));
+}
+#peng1Fatale1::before{
+    position: absolute;
+    display: block;
+    content: "";
+    /* border: 3px solid; */
+    width: 40%;
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: inset -25px -25px 30px white, inset 25px 25px 30px white;
+    animation: entryFatale1 0.75s linear;
+    opacity: 0;
+    z-index: 5;
+}
+@keyframes entryFatale1 {
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(6);
+    }
+}
+#fatal1Peng1{
+    width: 62%;
+    animation: f1peng1 1s linear;
+    display: none;
+}
+@keyframes f1peng1 {
+    0%{
+        scale: 5;
+    }
+    60%{
+        scale: 1;
+    }
+}
+#fatal2Peng1{
+    width: 100%;
+    animation: f2peng1 2s linear;
+    display: none;
+}
+@keyframes f2peng1 {
+    0%{
+        width: 20%;
+    }
+    60%{
+        width: 100%;
+    }
+}
+
+#paradiseDiv{
+    position: absolute;
+    /* border: 2px solid yellow; */
+    width: 100%;
+    height: 100%;
+    z-index: 21;
+    display: none;
+    align-items: center;
+}
+#paradiseDiv::before{
+    position: absolute;
+    content: "";
+    display: block;
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    border-radius: 50%;
+    box-shadow: inset 40px 40px 40px cyan, inset -40px -40px 40px cyan;
+    z-index: 1;
+    animation: para 0.45s linear;
+    scale: 4;
+    opacity: 0;
+}
+@keyframes para {
+    0%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+#backParadise{
+    min-width: 101%;
+    min-height: 100%;
+    animation: imgParadis 10s linear infinite;
+    /*margin-left: -0.2%;*/ 
+}
+#backParadise:nth-child(2), #backParadise:nth-child(3){
+    margin-left: -0.25%; 
+}
+@keyframes imgParadis {
+    100%{
+        transform: translateX(-200%);
+    }
+}
+#coins-earned{
+    position: absolute;
+    /* border: 2px solid blue; */
+    height: 35%;
+    width: 80%;
+    left: 10%;
+    top: 20%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(146, 179, 250), white, rgb(1, 16, 46));
+    color: rgb(2, 2, 124);
+    -webkit-text-stroke: 1px rgb(76, 76, 253);
+    /* animation: coinsEarned 4s linear; */
+    opacity: 0;
+}
+@keyframes coinsEarned {
+    0%{
+        opacity: 1;
+    }
+    15%{
+        top: 20%;
+    }
+    35%{
+        opacity: 1;
+    }
+    100%{
+        top: 0;
+    }
+}
+#Angelpeng{
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    right: -100%;
+    top: 40%;
+    animation: angelAnim 7s linear infinite, angelP 0.5s linear infinite;
+    filter: drop-shadow(20px 20px 15px rgba(255, 255, 0, 0.678)) drop-shadow(-20px -20px 15px rgba(255, 255, 0, 0.678));
+}
+@keyframes angelAnim {
+    50%{
+        top: 20%;
+    }
+    100%{
+        top: 40%;
+        right: 100%;
+    }
+}
+@keyframes angelP {
+    50%{
+        filter: drop-shadow(20px 20px 15px white) drop-shadow(-20px -20px 15px white); 
+    }
+}
+#peng1inParadise{
+    position: absolute;
+    width: 28%;
+    height: 22%;
+    left: 5%;
+    top: 40%;
+    animation: Peng1angelAnim 1s linear infinite;
+}
+@keyframes Peng1angelAnim {
+    50%{
+        top: 43%;
+    }
+}
+
+
+/* div for ennemy */
+/* #div-for-ennemy{
+    position: absolute; 
+    top: 70%; 
+    border: 2px solid purple;
+    width: 100%;
+    height: 86%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    animation: transDivennemy calc(var(--pengGroundSlide)/2) linear infinite;
+    margin-top: 45%;
+    margin-left: 30%;
+} */
+/* @keyframes transDivennemy {
+    100%{
+        left: -100%;
+    }
+} */
+#ennemy1{
+    position: absolute;
+    /* border: 2px solid; */
+    width: 17%;
+    height: 20%;
+    bottom: 8%;
+    left: 100%;
+    z-index: 3;
+    /* animation: glissennemy1 calc(var(--pengGroundSlide)/1.5) linear infinite; */
+}
+@keyframes glissennemy1 {
+    100%{
+        left: -165%;
+    }
+}
+#ennemy2{
+    position: absolute;
+    /* border: 2px solid; */
+    width: 32%;
+    height: 22%;
+    bottom: 13%;
+    left: 120%;
+    /* animation: glissennemy2 calc(var(--pengGroundSlide)/1.38) linear infinite; */
+}
+@keyframes glissennemy2 {
+    100%{
+        left: -165%;
+    }
+}
+#ennemy3{
+    position: absolute;
+    /* border: 2px solid; */
+    width: 30%;
+    bottom: 12%;
+    left: 140%;
+    z-index: 2;
+    /* animation: rouleSursoi 0.8s linear infinite,  glissennemy3 calc(var(--pengGroundSlide)/1.26) linear infinite; */
+}
+@keyframes  rouleSursoi {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes glissennemy3 {
+    100%{
+        left: -165%;
+    }
+}
+#aigle{
+    position: absolute;
+    /* border: 2px solid; */
+    width: 49%;
+    bottom: 17%;
+    left: 160%;
+    /* animation: glissaigle calc(var(--pengGroundSlide)/1.5) linear infinite; */
+}
+@keyframes glissaigle {
+    100%{
+        left: -165%;
+    }
+}
+#ours{
+    position: absolute;
+    /* border: 2px solid; */
+    width: 55%;
+    bottom: 12%;
+    left: 180%;
+    /* animation: glissours calc(var(--pengGroundSlide)/1.6) linear infinite; */
+}
+@keyframes glissours {
+    100%{
+        left: -165%;
+    }
+}
+#phoque{
+    position: absolute;
+    /* border: 2px solid; */
+    width: 52%;
+    bottom: 9%;
+    left: 200%;
+    /* animation: glissphoque calc(var(--pengGroundSlide)/1.65) linear infinite; */
+}
+@keyframes glissphoque {
+    100%{
+        left: -165%;
+    }
+}
+
+
+
+
+
+
+
+#penguin-shoot{
+    position: absolute;
+    /* border: 2px solid blue; */
+    width: 10%;
+    height: 8%;
+    bottom: 18%;
+    left: 30%;
+    /* background-color: yellow; */
+    animation: shootAnim 0.7s linear infinite;
+}
+@keyframes shootAnim {
+    100%{
+        left: 88%;
+    }
+}
+#pengShield{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 18%;
+    height: 40%;
+    bottom: 14%;
+    left: 30%;
+    display: none;
+    animation: pengShieldAnim 0.7s linear infinite;
+}
+@keyframes pengShieldAnim {
+    50%{
+        bottom: 12%;
+        opacity: 40%;
+    }
+}
+#jet-pack{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 21%;
+    height: 22%;
+    top: 31%;
+    left: 100%;
+    filter: drop-shadow(10px 10px 25px yellow);
+    /*animation: jetanim 0.85s linear infinite, slideJet calc(var(--pengGroundSlide)*1.3) linear infinite;*/
+}
+@keyframes jetanim {
+    50%{
+        top: 38%;
+    }
+}
+@keyframes slideJet {
+    100%{
+        left: -165%;
+    }
+}
+
+
+
+#coins-displayer{
+    position: absolute;
+    border: 2px solid blueviolet;
+    background: gold;
+    width: 7%;
+    height: 9%;
+    top: 32%;
+    left: 100%;
+    animation: slideCoins calc(var(--pengGroundSlide)*1.5) linear infinite;
+    opacity: 0;
+}
+#coins1{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 7%;
+    top: 42%;
+    left: 100%;
+    animation: coinsAnim 2s linear infinite, slideCoins calc(var(--pengGroundSlide)*1.5) linear infinite;
+}
+@keyframes slideCoins {
+    100%{
+        left: -165%;
+    }
+}
+#coins2{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 7%;
+    top: 42%;
+    left: 107%;
+    animation: coinsAnim 2s linear infinite, slideCoins calc(var(--pengGroundSlide)*1.56) linear infinite;
+}
+#coins3{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 7%;
+    top: 42%;
+    left: 114%;
+    animation: coinsAnim 2s linear infinite, slideCoins calc(var(--pengGroundSlide)*1.62) linear infinite;
+}
+#coins4{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 7%;
+    top: 42%;
+    left: 121%;
+    animation: coinsAnim 2s linear infinite, slideCoins calc(var(--pengGroundSlide)*1.68) linear infinite;
+}
+#coins5{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 7%;
+    top: 42%;
+    left: 128%;
+    animation: coinsAnim 2s linear infinite, slideCoins calc(var(--pengGroundSlide)*1.74) linear infinite;
+}
+#coins6{
+    position: absolute;
+    /* border: 2px solid blueviolet; */
+    width: 7%;
+    top: 42%;
+    left: 135%;
+    animation: coinsAnim 2s linear infinite, slideCoins calc(var(--pengGroundSlide)*1.8) linear infinite;
+}
+
+@keyframes coinsAnim {
+    50%{
+        /* top: 44%; */
+        margin-top: 1.75%;
+        transform: rotateY(180deg);
+    }
+}
+
+
+
+
+#damage{
+    position: absolute;
+    /* border: 2px solid yellow; */
+    width: 100%;
+    height: 100%;
+    background: /*rgba(255, 255, 255, 0.205)*/ rgba(255, 0, 0, 0.432) rgba(255, 255, 255, 0.253);
+    z-index: 20;
+    opacity: 0;
+    /*animation: dam 0.5s linear;*/
+}
+@keyframes dam {
+    0%{
+        opacity: 1;
+    }
+}
+#damage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#gameOver-pengslider{
+    z-index: 21;
+    position: absolute;
+    border: 3px solid rgb(167, 48, 1);
+    width: 95%;
+    height: 95%;
+    top: 1.5%;
+    left: 2.5%;
+    background: linear-gradient(rgb(245, 177, 76), white, rgb(167, 48, 1));
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#GameOver-Div1{
+    width: 100%;
+    height: 80%;
+    /* border: 2px solid; */
+    display: flex;
+}
+#GameOver-Div2{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#GameOver10ypLink{
+    position: absolute;
+    /* border: 2px solid red; */
+    width: 95%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    background: linear-gradient(rgb(192, 243, 90), white, rgb(110, 165, 1));
+    color: rgb(92, 31, 7);
+    text-shadow: 2px 2px 8px rgb(255, 174, 0);
+    animation: Earn10Freeyp 0.45s linear infinite;
+}
+@keyframes Earn10Freeyp {
+    50%{
+        transform: scale(1.05);
+    }
+}
+#side1{
+   width: 55%;
+   height: 100%;
+   /* border: 2px solid red; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+#side2{
+    width: 45%;
+    max-height: 100%;
+    /* border: 2px solid green; */
+    padding: 2% 0 0 2%;
+ }
+#side2 img{
+    /* border: 2px solid; */
+    position: relative;
+    box-shadow: 3px 3px black;
+    width: 85%;
+    height: 45%;
+    animation: imgAni 0.75s linear infinite; 
+}
+@keyframes imgAni {
+    50%{
+        transform: scale(1.05);
+    }
+}
+#side2 img::before{
+   display: block;
+   content: "Ad";
+   /* border: 2px solid; */
+   text-align: center;
+   padding: 1%;
+   width: 20%;
+   font-weight: bold;
+   color: black;
+   background: yellow;
+}
+#adImg1{
+    margin-top: 3%;
+}
+#adImg2{
+    margin-top: 4%;
+}
+
+#side1 h1{
+    font-size: 40px;
+    -webkit-text-stroke: 1px;
+    text-shadow: 2px 2px 2px black;
+}
+#side1 h3{
+    color: rgb(51, 174, 245);
+    font-size: 30px;
+    -webkit-text-stroke: 1px;
+    text-shadow: 2px 2px 2px rgb(2, 48, 75);
+    margin-bottom: 2.5%;
+}
+#side1 h2{
+    font-size: 30px;
+    -webkit-text-stroke: 1px;
+    text-shadow: 2px 2px 2px black;
+}
+#side1 h4{
+    color: rgb(252, 165, 3);
+    font-size: 25px;
+    -webkit-text-stroke: 1px;
+    text-shadow: 2px 2px 2px rgb(107, 70, 2);
+    margin-bottom: 2.5%;
+}
+#gameOptions{
+    /* border: 2px solid; */
+    width: 90%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gameOptions img{
+    width: 17%;
+    height: 55%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+#gameOptions img:nth-child(2){
+    height: 90%;
+    width: 25%;
+}
+
+#continuePeng{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.596);
+}
+#ifContinue{
+    position: absolute;
+    /* border: 2px solid red; */
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+    width: 90%;
+    text-align: center;
+    padding: 2%;
+    background: linear-gradient(rgb(161, 238, 250), white, rgb(1, 128, 187));
+    animation: displayContinue 0.15s linear;
+}
+@keyframes displayContinue {
+    0%{
+        opacity: 0;
+    }
+}
+#ifContinue button{
+    padding: 1.5% 2%;
+    font-weight: bold;
+    color: white;
+    margin-top: 2%;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px black;
+}
+#ifContinue button:nth-child(2){
+    background: rgb(253, 141, 13);
+}
+#ifContinue button:nth-child(3){
+    background: yellowgreen;
+}
+
+@media screen and (max-width: 915px){
+
+    #GameOver10ypLink{
+        font-size: 15px;
+    }
+
+    #side1 h1{
+        font-size: 25px;
+    }
+    #side1 h3{
+        font-size: 17px;
+    }
+    #side1 h2{
+        font-size: 17px;
+    }
+    #side1 h4{
+        font-size: 15px;
+    }
+
+    #coins-points{
+           font-size: 17px;
+     }
+    #score{
+        font-size: 14px;
+        text-shadow: 1px 2px black;
+    }
+    #score span{
+        font-size: 17px;
+    }
+    #select-for-penguin-slider{
+        font-size: 16px;
+    }
+    #penguins-intro-select ul{
+        font-size: 11px;
+    }
+}
