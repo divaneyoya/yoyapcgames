@@ -1,0 +1,37 @@
+*{
+    text-align: center;
+}
+
+#introduction{
+    /* border: 2px solid; */
+    margin-top: 40px;
+    padding: 0 7%;
+    font-weight: 600;
+    font-size: 19px;
+}
+#introduction span{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#birth, #aim, #contact, #donate, #play{
+    /* border: 2px solid; */
+    margin-top: 20px;
+    -webkit-text-stroke: 1px;
+    padding: 0 5%;
+    font-size: 17px;
+}
+
+
+@media screen and (max-width: 915px){
+    #introduction{
+        font-size: 15px;
+        padding: 0 2%;
+    }
+    #introduction span{
+        font-size: 18px;
+    }
+    #birth, #aim, #contact, #donate, #play{
+        font-size: 14px;
+    }
+}

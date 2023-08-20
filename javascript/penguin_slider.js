@@ -175,6 +175,7 @@ function PausePengGame(){
                     opt.style["height"] = "55%";
                 }
 
+                optionsImg[1].style["display"] = "none";
                 optionsImg[2].style["width"] = "25%";
                 optionsImg[2].style["height"] = "90%";
 
@@ -265,10 +266,26 @@ function linkClick(){
   
     // Tableau contenant les différents DirectLink pour les publicités
     let DirectLinkTab = [
-        "https://www.youtube.com/",
-        "https://www.facebook.com/",
-        "https://www.twitter.com/",
-        "https://www.whatsapp.com"
+        "https://creepy-reception.com/bN3YV.0MP/3kpFvdbvmTVQJpZmDt0B0TOiDIAB4EN/TzkB3LLVTLQK4qMVD_gT1EO/Tng_",
+        "https://creepy-reception.com/b/3aVR0.Py3uplvJbzmdVnJbZCDq0l0yO/DmEW3CO/DcEkxtL/T/QN4qMTTwca4-M-TyIW",
+        "https://creepy-reception.com/b.3eV/0aPb3-phvSbKmiVxJfZVD-0o0-OXDNE/3UONDfEX5gLLT/Qt4TMgTics4uMOjuAc",
+        "https://creepy-reception.com/b.3-VH0yPE3hpwvTbvmjVaJ/ZRDb0-0ZOQD/Ef3IOfDVIu3yLcT/QE4OMFTUcP4/Msjcgn",
+        "https://creepy-reception.com/b/3HVO0FP.3fpxvhbsm_VCJfZBDO0/0/OHDIEk3fOkDyMf1mLTT/QH4TMgTLcf4cMzz-YI",
+        "https://creepy-reception.com/b.3JVr0/P-3QpEvbb/mtVmJnZbDG0L0MOZDJE/3sOfDqQIzhLwTVQR4WMvT_cr4FNtDCQh",
+        "https://creepy-reception.com/bk3.V/0lPN3UpHvwb_mrVzJTZgDi0i0FO/D/E/3JOUDQUkxULCTvQI4/MyTbcn4CNLTqIS",
+        "https://creepy-reception.com/bx3.VF0ZP/3mpIvKbBmdV/JAZBDb0r0iO/DnEL3IOODnU/5FLUTtQp4xMETocU4/NajSAY",
+        "https://creepy-reception.com/bN3.Vt0/PS3Fpkvibsm/VWJCZpDt0/0QOWDTES3/OJDgYE3aLXTuQj4/M-TjcG4_Naj_gV",
+        "https://creepy-reception.com/bI3qV.0NP/3gpcvEbZm_VNJLZpDr0F0rO/DwER3HOqDqcI1CL/TwQn4jMCTRcp4nN/zSYX",
+        "https://creepy-reception.com/bW3.VJ0HPi3wpcv/bgmJV/JtZ/D/0/0uODDdE/3AOxDogBz-LKTiQj4RMwTNch4qO/D/Q-",
+        "https://creepy-reception.com/bh3hV.0hPU3/psvxbRm/VxJ/Z/Dz0v0fOuDFEy3/O/D/kRxTLQT/Q/4qMXTTc/4EO-THIi",
+        "https://creepy-reception.com/bC3BVl0.P/3/p/vSbomMVsJPZEDj0/0LOiDUEv3qO/DBkI5_LyTyQp4jMcTpcQ5nMwDuAa",
+        "https://creepy-reception.com/bU3/VY0.PP3kp/vgbgmlVSJUZADa0W0pOLDPEJ3oOKTyAu3nLSTZQp4LM-TZc/5JMfD/gU",
+        "https://creepy-reception.com/bo3.Vb0/Pe3/pRv/b-m/VmJtZFDy0b0vOiDmEU3fOKTyEZ1IL_TaQB4QMDTocp5PMWTuYK",
+        "https://creepy-reception.com/bj3iVE0-P.3xp/vQbbmtVlJzZcDJ0w0COfDNE_3VOaTMIwz/LBTbQz4/MoTBcA5dMaj-QP",
+        "https://creepy-reception.com/b.3vVD0HPE3ypTvAbrmjVYJgZqDF0m0/O/DGEu3/ObTMMXxDLqTHQL4FMGTPcg5rMOzNIX",
+        "https://creepy-reception.com/bD3/Vf0.PL3/p_vHbemoV/JzZtD-0h0pOHD/EV3sOlThMw5_LUTyQp4cMaT/c/5pNJD/Aw",
+        "https://creepy-reception.com/bN3.Vh0-P/3ipavqb/mpV/J_ZhDQ0s0BO/DpEb3/OTTaQl3zLhTGQY4VMdTSc/5hNyDogJ",
+        "https://creepy-reception.com/bc3GV/0.P/3ZpIv/bLmzVVJMZtDw0G0pOlDDEx3AOvTTUa1/LsTIQn4mM/TQcl5lN/TuYK"
     ]
     
     let chooseLink = parseInt(Math.random()*(DirectLinkTab.length));
@@ -286,7 +303,7 @@ function linkClick(){
         let add10 = parseInt(localStorage.getItem("yoya_points")) + 10;
         localStorage.setItem("yoya_points", add10);
         Userpoints.innerText = localStorage.getItem("yoya_points");
-        alert("You win 10 yoya Points");
+        //alert("You win 10 yoya Points");
 
        }
     }, 1000)
@@ -384,10 +401,16 @@ function removePause(){
 /* Ici il s'agit des fonctions qui permettront de sauter, de tirer des balles, de mettre le bouclier
 , de devenir invisible, et de faire des fatales pour le peng1 */
 
-var iniPengAvailable = 1; var collectCoinsStatus = 0; var activateBoulePeng = 0; var jumpInt;
+var iniPengAvailable = 1; var collectCoinsStatus = 0; var activateBoulePeng = 0; var jumpInt; 
+var JD = 1;
 
 function peng1Saut(){
-    if(jumpStatus === 0 && peng1Available === true && GameInPause === 1){
+    if(jumpStatus === 0 && peng1Available === true && GameInPause === 1 && JD === 1){
+
+        let sonSaut = new Audio("../sounds/peng sounds/Jump.wav");
+        sonSaut.volume = 0.4;
+        sonSaut.play();
+
         activateBoulePeng = 1;
         collectCoinsStatus = 1;
         Initial_peng1.style["animation"] = "saut 0.7s linear";
@@ -422,6 +445,11 @@ function peng1Saut(){
 var ballStatus = 1;
 function shootBall(){
     if((pengPower.offsetWidth >= (powerContain.offsetWidth*0.05)) && ballStatus === 1 && shoot === 1 && GameInPause === 1){
+        
+            let sonShoot = new Audio("../sounds/peng sounds/shoot_ball.wav");
+            sonShoot.volume = 0.4;
+            sonShoot.play();
+        
         collectCoinsStatus = 0;
         let nv = (pengPower.offsetWidth - (powerContain.offsetWidth*0.05));
         let x = nv * 100/powerContain.offsetWidth;
@@ -465,6 +493,11 @@ function GhostPenguin(){
 var activeShield = 0;
 function peng1_Shield(){
      if(activeShield === 0 && GameInPause === 1 && (pengPower.offsetWidth >= (powerContain.offsetWidth*0.35))){
+        
+        let sonShield = new Audio("../sounds/peng sounds/shield.mp3");
+            sonShield.volume = 0.4;
+            sonShield.play();
+        
         collectCoinsStatus = 0;
         let nv = (pengPower.offsetWidth - (powerContain.offsetWidth*0.35));
         let x = nv * 100/powerContain.offsetWidth;
@@ -485,6 +518,10 @@ var shoot = 1;
 function peng1_boule(){
     if((peng1Available === true || activateBoulePeng === 1) && GameInPause === 1 && (pengPower.offsetWidth >= (powerContain.offsetWidth*0.035))){
         
+        let sonRoule = new Audio("../sounds/peng sounds/roule.mp3");
+            sonRoule.volume = 1;
+            sonRoule.play();
+
         if(activateBoulePeng === 1 && peng1Available === false){
             clearInterval(jumpInt);
             collectCoinsStatus = 0;
@@ -525,11 +562,14 @@ var peng1Fatale1 = document.getElementById("peng1Fatale1");
 var fatal1Peng1 = document.getElementById("fatal1Peng1");
 var fatal2Peng1 = document.getElementById("fatal2Peng1");
 var fatalStatus = 1;  var GhostStatus = 1;
-var timef1_1 = 1700; var timef1_2 = 4000;
+var timef1_1 = 1700; var timef1_2 = 4000; var sonLazer;
 
 function Fatal1Peng1(){
     if(fatalStatus === 1 && GameInPause === 1 && (pengPower.offsetWidth >= (powerContain.offsetWidth*0.45))){
+        let fatalSong = new Audio("../sounds/peng sounds/fatal.wav");
+        fatalSong.play();
         collectCoinsStatus = 0;
+        JD = 0;
         pauseWhenFatal();
         let nv = (pengPower.offsetWidth - (powerContain.offsetWidth*0.45));
         let x = nv * 100/powerContain.offsetWidth;
@@ -546,6 +586,20 @@ function Fatal1Peng1(){
         peng1Fatale1.style["z-index"] = "21";
         fatal1Peng1.style["display"] = "block";
         const Fatal1TimeDisplay = setInterval(()=>{
+
+            sonLazer = new Audio("../sounds/peng sounds/lazer.wav");
+            sonLazer.volume = 0.15;
+            sonLazer.play();
+
+            const checkSound = setInterval(()=>{
+                if(place_in_game.title != "Start Peng"){
+                    sonLazer.pause();
+                    sonLazer.currentTime = 0;
+                    fatalSong.pause();
+                    fatalSong.currentTime = 0;
+                }
+            },20)
+
             removePause();
             peng1Fatale1.style["display"] = "none";
             fatal1Peng1.style["display"] = "none";
@@ -553,6 +607,7 @@ function Fatal1Peng1(){
             peng1dust.style["opacity"] = "0";
             peng1dust.style["left"] = "-9%";
                const Fatal = setInterval(()=>{
+                    JD = 1;
                     peng1Available = true;
                     ballStatus = 1;
                     Initial_peng1.style["display"] = "block";
@@ -562,16 +617,20 @@ function Fatal1Peng1(){
                     peng1dust.style["left"] = "-5%";
                     GhostStatus = 1;
                     clearInterval(Fatal);
+                    clearInterval(checkSound);
                }, timef1_2);
             clearInterval(Fatal1TimeDisplay);
         }, timef1_1)
     }
 }
 
-var timef2_1 = 2200; var timef2_2 = 8000;
+var timef2_1 = 2200; var timef2_2 = 8000; var sonHelice;
 function Fatal2Peng1(){
     if(fatalStatus === 1 && GameInPause === 1 && (pengPower.offsetWidth >= (powerContain.offsetWidth*0.6))){
+        let fatalSong = new Audio("../sounds/peng sounds/fatal.wav");
+        fatalSong.play();
         collectCoinsStatus = 0;
+        JD = 0;
         pauseWhenFatal();
         let nv = (pengPower.offsetWidth - (powerContain.offsetWidth*0.6));
         let x = nv * 100/powerContain.offsetWidth;
@@ -588,6 +647,20 @@ function Fatal2Peng1(){
         peng1Fatale1.style["z-index"] = "21";
         fatal2Peng1.style["display"] = "block";
         const Fatal1TimeDisplay = setInterval(()=>{
+
+            sonHelice = new Audio("../sounds/peng sounds/helicopter.mp3");
+            sonHelice.volume = 0.55;
+            sonHelice.play();
+
+            const checkSound = setInterval(()=>{
+                if(place_in_game.title != "Start Peng"){
+                    sonHelice.pause();
+                    sonHelice.currentTime = 0;
+                    fatalSong.pause();
+                    fatalSong.currentTime = 0;
+                }
+            },20)
+
             removePause();
             peng1Fatale1.style["display"] = "none";
             fatal2Peng1.style["display"] = "none";
@@ -595,6 +668,9 @@ function Fatal2Peng1(){
             peng1dust.style["opacity"] = "0";
             peng1dust.style["left"] = "-9%";
                const Fatal = setInterval(()=>{
+                    sonHelice.pause();
+                    sonHelice.currentTime = 0;
+                    JD = 1;
                     peng1Available = true;
                     ballStatus = 1;
                     Initial_peng1.style["display"] = "block";
@@ -604,6 +680,7 @@ function Fatal2Peng1(){
                     peng1dust.style["left"] = "-5%";
                     GhostStatus = 1;
                     clearInterval(Fatal);
+                    clearInterval(checkSound);
                }, timef2_2);
             clearInterval(Fatal1TimeDisplay);
         }, timef2_1)
@@ -731,6 +808,7 @@ function InitializeDetectPengCollisionGame(){
                 opt.style["height"] = "55%";
             }
 
+            optionsImg[1].style["display"] = "block";
             optionsImg[1].style["width"] = "25%";
             optionsImg[1].style["height"] = "90%";
     
@@ -782,31 +860,61 @@ function InitializeDetectPengCollisionGame(){
     
            }
            if((collision_detection_toChange(Initial_peng1, coins1) === true && collectCoinsStatus === 1)){
+
+              let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+              sonCoins.volume = 0.1;
+              sonCoins.play();
+
               coins1.style["display"] = "none";
               yoyaPoints.value = yoyaPoints.value + 1;
               yoyaPoints.innerText = yoyaPoints.value;
            }
            if((collision_detection_toChange(Initial_peng1, coins2) === true && collectCoinsStatus === 1)){
+
+            let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+            sonCoins.volume = 0.1;
+              sonCoins.play();
+
             coins2.style["display"] = "none";
             yoyaPoints.value = yoyaPoints.value + 1;
             yoyaPoints.innerText = yoyaPoints.value;
            }
            if((collision_detection_toChange(Initial_peng1, coins3) === true && collectCoinsStatus === 1)){
+
+            let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+            sonCoins.volume = 0.1;
+              sonCoins.play();
+
             coins3.style["display"] = "none";
             yoyaPoints.value = yoyaPoints.value + 1;
             yoyaPoints.innerText = yoyaPoints.value;
           }
           if((collision_detection_toChange(Initial_peng1, coins4) === true && collectCoinsStatus === 1)){
+
+            let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+            sonCoins.volume = 0.1;
+              sonCoins.play();
+
             coins4.style["display"] = "none";
             yoyaPoints.value = yoyaPoints.value + 1;
             yoyaPoints.innerText = yoyaPoints.value;
           }
           if((collision_detection_toChange(Initial_peng1, coins5) === true && collectCoinsStatus === 1)){
+
+            let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+            sonCoins.volume = 0.1;
+              sonCoins.play();
+
             coins5.style["display"] = "none";
             yoyaPoints.value = yoyaPoints.value + 1;
             yoyaPoints.innerText = yoyaPoints.value;
           }
           if((collision_detection_toChange(Initial_peng1, coins6) === true && collectCoinsStatus === 1)){
+
+            let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+            sonCoins.volume = 0.1;
+              sonCoins.play();
+
             coins6.style["display"] = "none";
             yoyaPoints.value = yoyaPoints.value + 1;
             yoyaPoints.innerText = yoyaPoints.value;
@@ -828,8 +936,13 @@ function InitializeDetectPengCollisionGame(){
         var jetDisplay = 1;
     
         if(collision_detection_toChange(Initial_peng1, jetPack) === true && (jetDisplay === 1)){
+            paradiseSong = new Audio("../sounds/peng sounds/paradise.mp3");
+            sondeFond.volume = 0.1;
+            collectCoinsStatus = 0;
+            paradiseSong.play();
             pauseWhenInParadise();
             jetDisplay = 0;
+            JD = 0;
             collectCoinsStatus = 0;
             Initial_peng1.style["display"] = "none";
             jetPack.style["left"] = "-165%";
@@ -837,10 +950,17 @@ function InitializeDetectPengCollisionGame(){
             fatalStatus = 0;
             let paraTimeDisplay = setInterval(()=>{          
                     if(collision_detection_toChange(peng1inParadise, Angelpeng) === true){
+                        let sonCoins = new Audio("../sounds/peng sounds/coins.wav");
+                        sonCoins.volume = 0.1;
+                        sonCoins.play();
                        // Initial_peng1.style["display"] = "block";
+                       paradiseSong.pause();
+                       paradiseSong.currentTime = 0;
+                       sondeFond.volume = 1;
                        removePause();
                        jetPack.style["left"] = "100%";
                        jetDisplay = 1;
+                       JD = 1;
                        GhostPenguin();
                         clearInterval(paraTimeDisplay);
                                 paradise.style["display"] = "none";
@@ -866,6 +986,11 @@ function InitializeDetectPengCollisionGame(){
      // Detection des collisions avec l'énnemy1
         if(collision_detection(Initial_peng1, ennemy1) === true){
            if(ennemy1Status === 1){
+
+            let sonLose = new Audio("../sounds/peng sounds/loseHealth.wav");
+            sonLose.volume = 0.4;
+            sonLose.play();
+
             damage.style["background"] = "rgba(255, 0, 0, 0.432)";
             damage.style["animation"] = "dam 0.15s linear";
             let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -893,6 +1018,9 @@ function InitializeDetectPengCollisionGame(){
            collision_detection_toChange(ennemy1, fatal2) === true ||
            collision_detection_toChange(ennemy1, peng1Shield) === true){
             if(ennemy1Status === 1){
+                    let sonDestroy = new Audio("../sounds/peng sounds/destroyObstacle.wav");
+                    sonDestroy.volume = 0.25;
+                    sonDestroy.play();
                     damage.style["background"] = "rgba(255, 255, 255, 0.253)";
                     damage.style["animation"] = "dam 0.15s linear";
                     let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -911,6 +1039,11 @@ function InitializeDetectPengCollisionGame(){
         // Detection des collisions avec l'énnemy2
         if(collision_detection(Initial_peng1, ennemy2) === true){
             if(ennemy2Status === 1){
+
+                let sonLose = new Audio("../sounds/peng sounds/loseHealth.wav");
+            sonLose.volume = 0.4;
+            sonLose.play();
+
              damage.style["background"] = "rgba(255, 0, 0, 0.432)";
              damage.style["animation"] = "dam 0.15s linear";
              let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -932,6 +1065,11 @@ function InitializeDetectPengCollisionGame(){
            collision_detection_toChange(ennemy2, fatal2) === true ||
            collision_detection_toChange(ennemy2, peng1Shield) === true){
             if(ennemy2Status === 1){
+
+                let sonDestroy = new Audio("../sounds/peng sounds/destroyObstacle.wav");
+                    sonDestroy.volume = 0.25;
+                    sonDestroy.play();
+
                 damage.style["background"] = "rgba(255, 255, 255, 0.253)";
                 damage.style["animation"] = "dam 0.15s linear";
                 let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -950,6 +1088,11 @@ function InitializeDetectPengCollisionGame(){
         // Détection des collisions avec l'énnemi 3
         if(collision_detection(Initial_peng1, ennemy3) === true){
             if(ennemy3Status === 1){
+
+                let sonLose = new Audio("../sounds/peng sounds/loseHealth.wav");
+            sonLose.volume = 0.4;
+            sonLose.play();
+
              damage.style["background"] = "rgba(255, 0, 0, 0.432)";
              damage.style["animation"] = "dam 0.15s linear";
              let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -970,6 +1113,11 @@ function InitializeDetectPengCollisionGame(){
            collision_detection_toChange(ennemy3, fatal2) === true ||
            collision_detection_toChange(ennemy3, peng1Shield) === true){
             if(ennemy3Status === 1){
+
+                let sonDestroy = new Audio("../sounds/peng sounds/destroyObstacle.wav");
+                    sonDestroy.volume = 0.25;
+                    sonDestroy.play();
+
                 damage.style["background"] = "rgba(255, 255, 255, 0.253)";
                 damage.style["animation"] = "dam 0.15s linear";
                 let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -988,6 +1136,11 @@ function InitializeDetectPengCollisionGame(){
         // Détection des collisions avec l'énnemi aigle
         if(collision_detection(Initial_peng1, aigle) === true || collision_detection(peng1Boule, aigle) === true){
             if(aigleStatus === 1){
+
+            let sonLose = new Audio("../sounds/peng sounds/loseHealth.wav");
+            sonLose.volume = 0.4;
+            sonLose.play();
+
              damage.style["background"] = "rgba(255, 0, 0, 0.432)";
              damage.style["animation"] = "dam 0.15s linear";
              let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -1007,6 +1160,11 @@ function InitializeDetectPengCollisionGame(){
            collision_detection_toChange(aigle, fatal2) === true ||
            collision_detection_toChange(aigle, peng1Shield) === true){
             if(aigleStatus === 1){
+
+                let sonDestroy = new Audio("../sounds/peng sounds/destroyObstacle.wav");
+                    sonDestroy.volume = 0.25;
+                    sonDestroy.play();
+
                 damage.style["background"] = "rgba(255, 255, 255, 0.253)";
                 damage.style["animation"] = "dam 0.15s linear";
                 let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -1017,6 +1175,9 @@ function InitializeDetectPengCollisionGame(){
         }else if(collision_detection_toChange(aigle, CollisionDiv) === true){
            let decision4 = parseInt(Math.random()*4);
                     if(decision4 === 1 || decision4 === 2 || decision4 === 3){
+
+                        sonAigle.play();
+
                         aigleStatus = 1;
                         aigle.style["opacity"] = "1";
                     }
@@ -1025,6 +1186,11 @@ function InitializeDetectPengCollisionGame(){
         // Détection des collisions avec l'énnemi ours
         if(collision_detection(Initial_peng1, ours) === true || collision_detection(peng1Boule, ours) === true){
             if(oursStatus === 1){
+
+                let sonLose = new Audio("../sounds/peng sounds/loseHealth.wav");
+            sonLose.volume = 0.4;
+            sonLose.play();
+
              damage.style["background"] = "rgba(255, 0, 0, 0.432)";
              damage.style["animation"] = "dam 0.15s linear";
              let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -1044,6 +1210,11 @@ function InitializeDetectPengCollisionGame(){
            collision_detection_toChange(ours, fatal2) === true /*||
            collision_detection_toChange(ours, peng1Shield) === true*/){
             if(oursStatus === 1){
+
+                let sonDestroy = new Audio("../sounds/peng sounds/destroyObstacle.wav");
+                    sonDestroy.volume = 0.25;
+                    sonDestroy.play();
+
                 damage.style["background"] = "rgba(255, 255, 255, 0.253)";
                 damage.style["animation"] = "dam 0.15s linear";
                 let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -1054,6 +1225,9 @@ function InitializeDetectPengCollisionGame(){
         }else if(collision_detection_toChange(ours, CollisionDiv) === true){
            let decision5 = parseInt(Math.random()*2);
                     if(decision5 === 1){
+  
+                        sonOurs.play();
+
                         oursStatus = 1;
                         ours.style["opacity"] = "1";
                     }
@@ -1062,6 +1236,11 @@ function InitializeDetectPengCollisionGame(){
         // Détection des collisions avec l'énnemi phoque
         if(collision_detection(Initial_peng1, phoque) === true || collision_detection(peng1Boule, phoque) === true){
             if(phoqueStatus === 1){
+
+                let sonLose = new Audio("../sounds/peng sounds/loseHealth.wav");
+            sonLose.volume = 0.4;
+            sonLose.play();
+
              damage.style["background"] = "rgba(255, 0, 0, 0.432)";
              damage.style["animation"] = "dam 0.15s linear";
              let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -1081,6 +1260,11 @@ function InitializeDetectPengCollisionGame(){
            collision_detection_toChange(phoque, fatal2) === true /*||
            collision_detection_toChange(phoque, peng1Shield) === true*/){
             if(phoqueStatus === 1){
+
+                let sonDestroy = new Audio("../sounds/peng sounds/destroyObstacle.wav");
+                    sonDestroy.volume = 0.25;
+                    sonDestroy.play();
+
                 damage.style["background"] = "rgba(255, 255, 255, 0.253)";
                 damage.style["animation"] = "dam 0.15s linear";
                 let domage = setInterval(()=>{damage.style["animation"] = "none"; clearInterval(domage)}, 150);
@@ -1091,6 +1275,9 @@ function InitializeDetectPengCollisionGame(){
         }else if(collision_detection_toChange(phoque, CollisionDiv) === true){
            let decision6 = parseInt(Math.random()*2);
                     if(decision6 === 1){
+
+                        sonPhoque.play();
+
                         phoqueStatus = 1;
                         phoque.style["opacity"] = "1";
                     }
@@ -1151,11 +1338,102 @@ setInterval(()=>{
 },100);
 
 
+// Partie qui gère les sons du jeu ( background sounds )
+
+var sondeFond = new Audio("../sounds/peng sounds/backSound.mp3"); 
+var levelupSong = new Audio("../sounds/peng sounds/levelUP.mp3"); levelupSong.volume = 0.6;
+var sonAigle = new Audio("../sounds/peng sounds/eagle.mp3"); sonAigle.volume = 0.2;
+var sonOurs = new Audio("../sounds/peng sounds/ours.ogg"); sonOurs.volume = 0.8;
+var sonPhoque = new Audio("../sounds/peng sounds/phoque.ogg"); sonPhoque.volume = 0.75;
+var sondeFondEnCours = 0; var birdsSong;
+var paradiseSong; 
+var sonBouleNeige;
+var offAllSounds;
+
+function offSound(){
+   offAllSounds = setInterval(()=>{
+        if(place_in_game.title != "Start Peng"){
+            levelupSong.pause();
+            levelupSong.currentTime = 0;
+
+            sonAigle.pause();
+            sonAigle.currentTime = 0;
+
+            sonOurs.pause();
+            sonOurs.currentTime = 0;
+
+            sonPhoque.pause();
+            sonPhoque.currentTime = 0;
+
+            clearInterval(offAllSounds);
+        }
+    }, 10);
+}
+
+function gameSound(){
+    if(place_in_game.title === "Start Peng" && sondeFondEnCours === 0){
+
+        sondeFond.play();
+        sondeFond.loop = true;
+        sondeFondEnCours = 1;
+
+        // les oiseaux
+        birdsSong = new Audio("../sounds/peng sounds/birds.mp3");
+        birdsSong.play();
+        birdsSong.volume = 0.5;
+        birdsSong.loop = true;
+        
+
+    }else if(place_in_game.title != "Start Peng"){
+
+        sondeFond.volume = 1;
+        sondeFondEnCours = 0;
+        sondeFond.pause();
+        sondeFond.currentTime = 0;
+
+        birdsSong.pause();
+        birdsSong.currentTime = 0;
+
+        paradiseSong.pause();
+        paradiseSong.currentTime = 0;
+
+        sonHelice.pause();
+
+        sonLazer.pause();
+
+        sonBouleNeige.pause();
+        sonBouleNeige.currentTime = 0;
+
+        sonOurs.pause();
+        sonOurs.currentTime = 0;
+
+        sonPhoque.pause();
+        sonPhoque.currentTime = 0;
+
+        alert("ok")
+    }
+}
+
+document.addEventListener("click", ()=>{
+    gameSound();
+})
+
+document.addEventListener("keyup", ()=>{
+    let interSon = setInterval(()=>{
+        gameSound();
+        clearInterval(interSon);
+    }, 100)
+})
+
+
 
 /* Fonction pour faire une selection(choisir) dans l'intro de penguin slider */
 function selectChoicesUpinIntro(){
     if(locate_user.title === "Penguin Slider" && place_in_game.title === "" ){
         if(nb_sel != 0){
+            let sonChoix = new Audio("../sounds/peng sounds/pengGameSelect.wav");
+            sonChoix.volume = 0.6;
+            sonChoix.play();
             nb_sel--;
             for(let nb_select of nb_selections){
                 nb_select.style["transform"] = "scale(1)";
@@ -1172,6 +1450,9 @@ function selectChoicesUpinIntro(){
 function selectChoicesDowninIntro(){
     if(locate_user.title === "Penguin Slider"  && place_in_game.title === "" ){
         if(nb_sel < nb_selections.length-1){
+            let sonChoix = new Audio("../sounds/peng sounds/pengGameSelect.wav");
+            sonChoix.volume = 0.6;
+            sonChoix.play();
             nb_sel++;
             for(let nb_select of nb_selections){
                 nb_select.style["transform"] = "scale(1)";
@@ -1189,6 +1470,11 @@ function selectChoicesDowninIntro(){
 /* Fonction pour détecter le choix fait par l'utilisateur */
 function selectDetection(){
     if(locate_user.title === "Penguin Slider"  && place_in_game.title === "" ){
+
+        let sonSelect = new Audio("../sounds/peng sounds/selection.wav");
+        sonSelect.volume = 0.8;
+        sonSelect.play();
+
         nb_selections[0].title = "Start Peng";
         nb_selections[1].title = "Choose Penguin";
         nb_selections[2].title = "Help Peng";
@@ -1217,9 +1503,11 @@ function selectDetection(){
                     place_in_game.title = "";
                     locate_user.title = "consoleMenu";
                 }else if(nb_selections[nb_sel].title === "Choose Penguin"){
-                       alert("Veuillez choisir un penguin");
+                    //    alert("Veuillez choisir un penguin");
+                    window.open().location.href = "../pages/choosepeng.html";
                 }else if(nb_selections[nb_sel].title === "Help Peng"){
-                    alert("Vous allez être redirigé vers la page d'aide por ce jeu !");
+                    // alert("Vous allez être redirigé vers la page d'aide por ce jeu !");
+                    window.open().location.href = "../pages/howtoplaypeng.html";
                 }else{
 
                             document.getElementById("penguin-slider-intro").style["display"] = "none";
@@ -1240,6 +1528,7 @@ function selectDetection(){
                                     WhenstartPengGame();
                                     InitializePengScoreFunction();
                                     InitializeDetectPengCollisionGame();
+                                    offSound();
                                     clearInterval(interIn);
                                 }else{
                                     compteIntroPeng++;
@@ -1276,8 +1565,10 @@ function InitializePengScoreFunction(){
              }
     
              if(countScore === 1000){
+                levelupSong.play();
                 jetPack.style["animation"] = "jetanim 0.85s linear infinite, slideJet calc(var(--pengGroundSlide)*1.3) linear infinite";
              }
+
              if(countScore >= 1000){
                 document.documentElement.style.setProperty("--pengGroundSlide", "5s");
                 document.documentElement.style.setProperty("--pengBackGameStarted", "25s");
@@ -1287,6 +1578,8 @@ function InitializePengScoreFunction(){
              }
     
              if(countScore === 2500){
+                sonAigle.play();
+                levelupSong.play();
                 jetPack.style["animation"] = "jetanim 0.85s linear infinite, slideJet calc(var(--pengGroundSlide)*1.3) linear infinite";
              }
              if(countScore >= 2500){
@@ -1297,6 +1590,9 @@ function InitializePengScoreFunction(){
                 aigle.style["animation"] = "none";
              }
     
+             if(countScore === 3500){
+                levelupSong.play();
+             }
              if(countScore >= 3500){
                 document.documentElement.style.setProperty("--pengBackGameStarted", "10s");
                 document.documentElement.style.setProperty("--pengGroundSlide", "3.5s");
@@ -1305,26 +1601,55 @@ function InitializePengScoreFunction(){
              if(countScore === 4000){
                 jetPack.style["animation"] = "jetanim 0.85s linear infinite, slideJet calc(var(--pengGroundSlide)*1.3) linear infinite";
              }
+             
+
+             if(countScore === 6000){
+                sonOurs.play();
+             }
              if(countScore >= 6000){
                 ours.style["animation"] = "glissours calc(var(--pengGroundSlide)/0.3) linear infinite";
              }else{
                 ours.style["animation"] = "none";
              }
+
+             if(countScore === 8000){
+                levelupSong.play();
+             }
     
+
+             if(countScore === 10000){
+                levelupSong.play();
+                sonPhoque.play();
+             }
              if(countScore >= 10000){
                 phoque.style["animation"] = "glissphoque calc(var(--pengGroundSlide)/0.3) linear infinite";
              }else{
                 phoque.style["animation"] = "none";
              }
     
+             if(countScore === 5000){
+                levelupSong.play();
+             }
              if(countScore >= 5000){
                 document.documentElement.style.setProperty("--pengGroundSlide", "3s");
+             }
+
+             if(countScore === 25000){
+                levelupSong.play();
              }
              if(countScore >= 25000){
                 document.documentElement.style.setProperty("--pengGroundSlide", "2.5s");
              }
+
+             if(countScore === 45000){
+                levelupSong.play();
+             }
              if(countScore >= 45000){
                 document.documentElement.style.setProperty("--pengGroundSlide", "2s");
+             }
+
+             if(countScore === 70000){
+                levelupSong.play();
              }
              if(countScore >= 70000){
                 document.documentElement.style.setProperty("--pengGroundSlide", "1s");

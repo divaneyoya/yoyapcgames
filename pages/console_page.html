@@ -53,7 +53,7 @@
     </div>
     <div id="info">These informations below are <br>your Username and your points (Yoya Points)</div>
     <div id="div-username-points">
-        <p title="Your Username"><img src="../images/profil.png" alt=""><span>Yoya237</span></p>
+        <p title="Your Username"><img src="../images/profil.png" alt=""><span id="yourUsername"></span></p>
 
         <p title="Your Points">
          <img id="yoya-point" src="../images/yoya_point.png" alt=""><span id="userpoints" style="color: rgb(117, 81, 2); text-shadow: none;"></span>
@@ -61,15 +61,21 @@
     </div>
 
     <div id="div-intro-console">
-       <h1>Bellow is the console <br>that will help you to enjoy games</h1> <p>If you have any problem, you can see <a href="">this page</a> to help you on solving your problem. Note that if you are using a phone to play, you have to rotate it for you to have the console with good resolution. You can set the console in full screen by clicking the button "FSC" on the console if you are using a phone, or click the button "FSS" if you are using a computer.</p>
+       <h1>Introducing the console that will <br>allow you to have fun and play games</h1> 
+
+      <p>If you have a problem, you can consult <a href="">this page</a> to help you solve it. Note that if 
+         you're using a phone to play, you'll need to rotate it so that the console has the right resolution. 
+         You can set the console to full screen by clicking on the <span id="FSC_PC">"FSC"</span> button on the console if you're using 
+         a phone, or on the "FSS" button if you're using a computer.
+      </p>
     </div>
 
    <!-- Partie de la console -->
 
     <div id="console-div">
 
-       <h3 id="localisation" style="position: absolute; top:0; left: 0;">Localistion</h3>
-       <h3 id="place-in-game" style="position: absolute; top:0%; left: 35%;">Place in game</h3>
+       <h3 id="localisation" style="position: absolute; top:0; left: 0;" hidden>Localistion</h3>
+       <h3 id="place-in-game" style="position: absolute; top:0%; left: 35%;" hidden>Place in game</h3>
 
        <div id="console">
               <div id="left-part-console">
@@ -265,13 +271,12 @@
                                         <img onclick="returnToHomePeng()" src="../images/penguin_slider_images/homePeng.png" alt="">
                                         <img onclick="restartPengGame()" src="../images/penguin_slider_images/restartPengGame.png" alt="">
                                         <img onclick="ContinueWithoutLosingCoins()" src="../images/penguin_slider_images/continuPengGame.png" alt="">
-                                        
-                                        <img src="../images/penguin_slider_images/PengDonate.png" alt="">
+                                        <img onclick="window.open().location.href = 'donate.html'" src="../images/penguin_slider_images/PengDonate.png" alt="">
                                     </div>
                               </div>
                               <div id="side2">
-                                    <a target="_blank" href="" id="linkAdImg1"><img src="" alt="" id="adImg1"></a>
-                                    <a target="_blank" href="" id="linkAdImg2"><img src="" alt="" id="adImg2"></a>
+                                    <a target="_blank" href="" id="linkAdImg1"><img src="" alt="imageAds1" id="adImg1"></a>
+                                    <a target="_blank" href="" id="linkAdImg2"><img src="" alt="imageAds2" id="adImg2"></a>
                               </div>
                              </div>
                              <div id="GameOver-Div2">

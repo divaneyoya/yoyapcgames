@@ -7,8 +7,13 @@ var recent_games = document.querySelector("main #recent_games");
 var taille = menu.offsetHeight + home_console.offsetHeight;
 var downloadHome = document.getElementById("download-app");
 var i=0;
-
 var Check = localStorage.getItem("DontShow");
+// permet d'afficher ou de rétirer le bouton subscribe sur la page d'accueil
+let checkUser = localStorage.getItem("Username");
+if(checkUser){
+    document.getElementById("Subscribe").style["display"] = "none";
+}
+
 if(!Check){
     Check = localStorage.setItem("DontShow", "");
 }

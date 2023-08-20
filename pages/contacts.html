@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/logo_marque.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/contacts.css">
     <title>Contacts page</title>
 </head>
 <body onclick="closePhoneHeader()">
     
+   <!-- Header Part -->
     <header>
         <div id="slide-parent">
            <img src="../images/header_images/bg-site1.jpg" alt="">
@@ -52,9 +54,41 @@
          </div>
      </div>
 
+     <!-- Body Part -->
+     <h1 id="contact-us">Contact Us</h1>
+     <div id="info-contacts">
+          <div id="contacts">
+               <div id="first-contacts">
+                    <b><u>Tel:</u> +237 621070379</b> <br>
+                    <b><u>E-mail:</u> drawingsdessins3@gmail.com</b>
+               </div>
+
+               <h4><u>Our social networks</u></h4>
+               <div id="socials-networks">
+                    <img src="../images/social_network/facebook.svg" alt="">
+                    <img src="../images/social_network/youtube.svg" alt="">
+                    <img src="../images/social_network/twitter.svg" alt="">
+                    <img src="../images/social_network/instagram.svg" alt="">
+               </div>
+          </div>
+     </div><br><br>
 
 
+     <script>
+        setInterval(()=>{  
 
+                     let BodyWidth = document.querySelector("body").offsetWidth;
+                     let BodyHeight = document.querySelector("body").offsetHeight;
+                     let AllImg = document.querySelectorAll("#socials-networks img");
+
+                     if(BodyWidth > BodyHeight){
+                         document.getElementById("contacts").style["width"] = "60%";
+                     }else{
+                        document.getElementById("contacts").style["width"] = "90%";
+                     }
+
+                     },50)
+     </script>
      <script src="../javascript/header.js"></script>
 </body>
 </html>

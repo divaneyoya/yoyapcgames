@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/logo_marque.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/earn_points.css">
-    <title>Earn points page</title>
+    <link rel="stylesheet" href="../css/gameAbsent.css">
+    <title>Game currently unavailable</title>
 </head>
 <body onclick="closePhoneHeader()">
-    <!-- Page header -->
     <header>
         <div id="slide-parent">
            <img src="../images/header_images/bg-site1.jpg" alt="">
@@ -25,7 +24,7 @@
                  <li><a href="../index.html">Home</a></li>
                  <li><a href="console_page.html">Play</a></li>
                  <li><a href="donate.html">Donate</a></li>
-                 <li style="background: rgba(255, 255, 255, 0.411);"><a href="earn_points.html">Earn Points</a></li>
+                 <li><a href="earn_points.html">Earn Points</a></li>
                  <li><a href="designs.html">Designs</a></li>
                  <li><a href="about.html">About</a></li>
                  <li><a href="contacts.html">Contacts</a></li>
@@ -45,25 +44,32 @@
                  <li><a href="../index.html">Home</a></li>
                  <li><a href="console_page.html">Play</a></li>
                  <li><a href="donate.html">Donate</a></li>
-                 <li style="background: rgba(255, 255, 255, 0.411);"><a href="earn_points.html">Earn Points</a></li>
+                 <li><a href="earn_points.html">Earn Points</a></li>
                  <li><a href="designs.html">Designs</a></li>
                  <li><a href="about.html">About</a></li>
                  <li><a href="contacts.html">Contacts</a></li>
              </ul>
          </div>
      </div>
-
+   
      <!-- Page body -->
-     <div id="page-body">
-        <h2>
-             On this page, you can earn points called yoya points, to unlock numerous characters in different 
-             games. You can also download any game on the site. We're sorry to say that this page is still 
-             under development, but don't worry, we'll be there very soon.
-         </h2>
+     <h2>
+        We are very sorry to inform you that this game is not yet available. The only game currently 
+        available is 'Penguin Slider'. But don't worry, the others are still in development. We'll let 
+        you know by e-mail when the games are finished. 
+     </h2>
+     <div id="available-games">
+          <img src="../images/pinguinslide_logo.png" alt="">
      </div>
+    
 
+    <script>
+        var allAvailableImages = document.querySelectorAll("#available-games img");
+        allAvailableImages.forEach((e)=>{
+            e.style["width"] = e.offsetHeight+"px";
+        })
+    </script>
 
-
-     <script src="../javascript/header.js"></script>
+    <script src="../javascript/header.js" defer></script>
 </body>
 </html>

@@ -13,6 +13,8 @@
     background: linear-gradient(yellow, orangered);
     padding: 5%;
     box-shadow: 8px 8px 40px rgb(248, 174, 36);
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 
@@ -35,6 +37,11 @@
     background: linear-gradient(blue, red);
     color: white;
 }
+#donate h4{
+   /* border: 2px solid; */
+   margin-top: 40px;
+   padding: 0 10%;
+}
 #container-for-differents-types-of-donation{
     /* border: 2px solid; */
     margin-top: 80px;
@@ -45,7 +52,7 @@
 }
 #container-for-differents-types-of-donation div{
     /* border: 2px solid; */
-    min-width: 50%;
+    width: 50%;
     max-height: 20%;
     display: flex; 
     align-items: center; 
@@ -78,8 +85,21 @@
     box-shadow: none;
 }
 
+#container-for-differents-types-of-donation b{
+    font-size: 15px;
+    /* border: 2px solid; */
+    width: 35%;
+    overflow: hidden;
+}
 
 @media screen and (max-width: 915px){
+    #donate h4{
+        font-size: 14px;
+        padding: 0 3%;
+    }
+    #container-for-differents-types-of-donation{
+        margin-top: 30px;
+    }
     #container-for-differents-types-of-donation img{
         margin-right: 0;
         margin-bottom: 7%;

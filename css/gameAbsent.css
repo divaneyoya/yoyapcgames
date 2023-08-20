@@ -1,0 +1,38 @@
+h2{
+    /* border: 2px solid; */
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 8%;
+    background: linear-gradient(orange, red);
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.658);
+}
+
+#available-games{
+    /* border: 2px solid; */
+    min-height: 50vh;
+    display: flex;
+    margin-top: 50px;
+    padding: 2% 0%;
+    justify-content: center;
+}
+
+#available-games img{
+    width: 30%;
+    min-height: 20%;
+    box-shadow: 5px 5px 15px black;
+    transition: 0.3s ease;
+    /* margin-left: 5%; */
+}
+
+#available-games img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 915px){
+    h2{
+        font-size: 16px;
+        font-weight: bold;
+    }
+}

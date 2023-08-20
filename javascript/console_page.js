@@ -25,7 +25,7 @@ var first_log_h2 = document.querySelector("#screen-console-first-log h2");
 var gamesMenu = document.getElementById("console-menu-games");
 var allgames = document.getElementsByClassName("game");
 var comp;  
-var son; 
+
 var lanceConsole = 1;  var tra;  var resetStatu = 0;
 var j = 0;
 var divContainGames = document.getElementById("div-contain-each-games");
@@ -42,8 +42,10 @@ if(!YourUsername){
 }else{
     if(!yoyaPoints){
         localStorage.setItem("yoya_points", 500);
+        alert("You got 500 yoya points for your sign up");
     }
-    Userpoints.innerText = localStorage.getItem("yoya_points")
+    Userpoints.innerText = localStorage.getItem("yoya_points");
+    document.getElementById("yourUsername").innerText = localStorage.getItem('Username');
 }
 
 
@@ -71,10 +73,42 @@ var divPenguinSlider = document.getElementById("penguin-slider-div");
 var tabGames = ["Penguin Slider","Danger Space", "Target It", "Amazing Fish", "Solidary Hero"];
 
 
+// Partie qui se charge de jouer les sons
+var son;  var introSong; var introSongEnCours = 0;
+
+function sonGame(){
+        if(locate_user.title === "Penguin Slider" && place_in_game.title === "" && introSongEnCours === 0){
+            introSong = new Audio("../sounds/peng sounds/first_intro.mp3");
+            introSong.play();
+            introSong.loop = true;
+            introSongEnCours = 1;
+        }else if((locate_user.title != "Penguin Slider" && place_in_game.title === "") || place_in_game.title != ""){
+            introSong.pause();
+            introSongEnCours = 0;
+        }
+}
+
+document.addEventListener("click", ()=>{
+    sonGame();
+});
+document.addEventListener("keyup", ()=>{
+    let interSon = setInterval(()=>{
+        sonGame();
+        clearInterval(interSon);
+    }, 100)
+})
+
+
 
 /* Fonction permettant de connaitre et de lancer un jeu qui a été choisi lorsque l'utilisateur appui 2 pour choisir son jeu */
+
 function detectGame(){
     if(locate_user.title === "consoleMenu"){
+
+        let sonSelect = new Audio("../sounds/peng sounds/selection.wav");
+        sonSelect.volume = 0.8;
+        sonSelect.play();
+
         locate_user.title = gameSelected.title;
 
         if(locate_user.title === "Penguin Slider" && place_in_game.title === ""){
@@ -82,6 +116,12 @@ function detectGame(){
             divPenguinSlider.style["display"] = "flex";
         }else{
             divPenguinSlider.style["display"] = "none";
+        }
+
+        if(locate_user.title != "Penguin Slider"){
+            locate_user.title = "consoleMenu";
+            let newWindow = window.open();
+            newWindow.location.href = "../pages/gameAbsent.html";
         }
     }
 }
@@ -103,6 +143,9 @@ function changeJeuDroit(){
         if(j != allgames.length-1){
             j++;
             // alert(j);
+            let sonChange = new Audio("../sounds/peng sounds/select_game.wav");
+            sonChange.volume = 0.5;
+            sonChange.play();
             for(let game of allgames){
                 game.style["transform"] = "scale(1)";
                 game.style["border"] = "none";
@@ -123,6 +166,9 @@ function changeJeuGauche(){
         if(j != 0){
             j--;
             // alert(j);
+            let sonChange = new Audio("../sounds/peng sounds/select_game.wav");
+            sonChange.volume = 0.5;
+            sonChange.play();
             for(let game of allgames){
                 game.style["transform"] = "scale(1)";
                 game.style["border"] = "none";
@@ -221,6 +267,7 @@ window.addEventListener("keyup", (e)=>{
     if(e.keyCode === 13){
         if(lanceConsole != 0){
             let compteh2 = 0;
+            locate_user.title = "";
         comp = setInterval(()=>{
         if(compteh2 === 4){
             first_log_h2.style["display"] = "block";
@@ -313,6 +360,18 @@ fss.addEventListener("click",()=>{
         consoleScreen.exitFullscreen();
     }
  })
+
+ document.getElementById("FSC_PC").addEventListener("click",()=>{
+    if(console.requestFullscreen){
+       console.requestFullscreen();
+    }else if(console.webkitRequestFullscreen){
+       console.webkitRequestFullscreen();
+    }else if(console.msRequestFullscreen){
+       console.msRequestFullscreen();
+    }else{
+       console.exitFullscreen();
+    }
+ });
 
 
 

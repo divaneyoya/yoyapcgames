@@ -11,7 +11,7 @@
 <body onclick="closePhoneHeader()">
 
     <div id="div-says-adress-copied">
-        <h2>the adress "<span id="adress-copied"></span>" has been successfully copied !</h2>
+        <h2>The <span id="type-adress"></span> address "<span id="adress-copied"></span>" has been successfully copied !</h2>
     </div>
 
     <!-- Header page -->
@@ -64,76 +64,84 @@
             Don't hesitate to make a donation. It will really help us to improve our work and make you even more satisfied.
             And thank you for your support!
          </h3>
+         <h4>When you want to copy an address, please press the "Copy Address" button, as the addresses you see on the
+             screen are not complete.
+         </h4>
          <div id="container-for-differents-types-of-donation">
              <div id="donate-paypal">
                 <img src="../donate_images/paypal_image.png" alt="">
-                <b>**************@gmail.com</b>
-                <button>Donate Now</button>
+                <b>***********@gmail.com</b>
+                <button onclick="window.location.href = 'https:/www.paypal.me/yoyapc'">Donate Now</button>
              </div>
              <div id="donate-payeer">
                 <img src="../donate_images/payeer_image.png" alt="">
-                <b id="payeer-address">P46549468</b>
+                <b id="payeer-address">P1085644961</b>
                 <button onclick="selectPayeerAdress()">Copy Address</button>
              </div>
              <div id="donate-perfect-money">
                 <img src="../donate_images/perfect_money_image.png" alt="">
-                <b id="perfect_money-address">P46541111</b>
+                <b id="perfect_money-address">U45647504</b>
                 <button onclick="selectPerfectMoneyAdress()">Copy Address</button>
              </div>
              <div id="donate-bitcoin">
                 <img src="../donate_images/bitcoin.png" alt="">
-                <b id="bitcoin-address">Bitcoin_P46541111</b>
-                <button>Copy Address</button>
+                <b id="bitcoin-address">bc1qtd0jp30562tpmtma7jhywp0tykysjze4c6jd3c</b>
+                <button onclick="selectBitcoinAdress()">Copy Address</button>
              </div>
              <div id="donate-bitcoinCash">
                 <img src="../donate_images/bitcoin_cash.png" alt="">
-                <b id="bitcoinCash-address">BitcoinCash_P46541111</b>
-                <button>Copy Address</button>
+                <b id="bitcoinCash-address">qrxv54qv6gtcnkl6mmjrtlft03n89ncxqce3h0s0a5</b>
+                <button onclick="selectBitcoinCashAdress()">Copy Address</button>
              </div>
              <div id="donate-ethereum">
                 <img src="../donate_images/ethereum.png" alt="">
-                <b id="ethereum-address">ethereum_P46541111</b>
-                <button>Copy Address</button>
+                <b id="ethereum-address">0xd9eD46A8Fb45A47B2D1bc6210da15db5F8Eb1030</b>
+                <button onclick="selectEthereumAdress()">Copy Address</button>
              </div>
              <div id="donate-litecoin">
                 <img src="../donate_images/litecoin.png" alt="">
-                <b id="litecoin-address">litecoin_P46541111</b>
-                <button>Copy Address</button>
+                <b id="litecoin-address">ltc1qx62q98cmk5cet0lu2pkkudw60f35knf7u8v5vw</b>
+                <button onclick="selectLitecoinAdress()">Copy Address</button>
              </div>
-             <div id="donate-bnb">
-                <img src="../donate_images/bnb.png" alt="">
-                <b id="bnb-address">bnb_P46541111</b>
-                <button>Copy Address</button>
+             <div id="donate-bnbB">
+                <img src="../donate_images/bnb_beacon.png" alt="">
+                <b id="bnbB-address">bnb1d6hdrc9pdx05lefsvxrcx2c8mcvc4u6eklws6t</b>
+                <button onclick="selectBNBBAdress()">Copy Address</button>
              </div>
+             <div id="donate-bnbS">
+               <img src="../donate_images/bnb_smart.png" alt="">
+               <b id="bnbS-address">0xd9eD46A8Fb45A47B2D1bc6210da15db5F8Eb1030</b>
+               <button onclick="selectBNBSAdress()">Copy Address</button>
+            </div>
              <div id="donate-dogecoin">
                 <img src="../donate_images/doge.png" alt="">
-                <b id="dogecoin-address">dogecoin_P46541111</b>
-                <button>Copy Address</button>
+                <b id="dogecoin-address">DDaU9AwJqgBVk4Ag78vVTMW3EtA7a9cEmc</b>
+                <button onclick="selectDogeAdress()">Copy Address</button>
              </div>
              <div id="donate-trx">
                 <img src="../donate_images/tron.png" alt="">
-                <b id="trx-address">tron_P46541111</b>
-                <button>Copy Address</button>
+                <b id="trx-address">TVyhekzhL7id6aTUaqbuNFYKLsQRxA6qXm</b>
+                <button onclick="selectTRXAdress()">Copy Address</button>
              </div>
              <div id="donate-usdt-trc20">
                 <img src="../donate_images/usdt_trc20.png" alt="">
-                <b id="usdt-trc20-address">usdt_trc20_P46541111</b>
-                <button>Copy Address</button>
+                <b id="usdt-trc20-address">TVyhekzhL7id6aTUaqbuNFYKLsQRxA6qXm</b>
+                <button onclick="selectUSDT_TRC20_Adress()">Copy Address</button>
              </div>
              <div id="donate-usdt-erc20">
                 <img src="../donate_images/usdt_erc20.png" alt="">
-                <b id="usdt-erc20-address">usdt_erc20_P46541111</b>
-                <button>Copy Address</button>
+                <b id="usdt-erc20-address">0xd9eD46A8Fb45A47B2D1bc6210da15db5F8Eb1030</b>
+                <button onclick="selectUSDT_ERC20_Adress()">Copy Address</button>
              </div>
              <div id="donate-shiba-erc20">
                 <img src="../donate_images/shiba_erc20.png" alt="">
-                <b id="shiba-erc20-address">shiba_erc20_P46541111</b>
-                <button>Copy Address</button>
+                <b id="shiba-erc20-address">0xd9eD46A8Fb45A47B2D1bc6210da15db5F8Eb1030</b>
+                <button onclick="selectShiba_ERC20_Adress()">Copy Address</button>
              </div>
              <div id="donate-shiba-bep20">
                 <img src="../donate_images/shiba_bep20.png" alt="">
-                <b id="shiba-bep20-address">shiba_bep20_P46541111</b>
-                <button>Copy Address</button>
+                <b id="shiba-bep20-address">0xd9eD46A8Fb45A47B2D1bc6210da15db5F8Eb1030</b>
+                <button onclick="selectShiba_BEP20_Adress()">Copy Address</button>
              </div>
 
          </div>
@@ -141,7 +149,7 @@
 
 
 
-     <script src="../javascript/donate.js"></script>
+     <script src="../javascript/donate.js" defer></script>
      <script src="../javascript/header.js" defer></script>
 </body>
 </html>

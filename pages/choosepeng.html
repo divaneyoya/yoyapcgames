@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo_marque.png" type="image/x-icon">
+    <title>Choose Penguin</title>
+</head>
+<body>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        h2{
+            font-size: 35px;
+            /* border: 2px solid; */
+            margin-top: 45px;
+            padding: 25px 0;
+            background: linear-gradient(blue, red);
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        #choose-div{
+            /* border: 2px solid; */
+            margin-top: 40px;
+            padding: 20px 0;
+            display: flex;
+            overflow-x: scroll;
+            gap: 15px;
+            padding: 30px 20px;
+        }
+        #choose-div img{
+            box-shadow: 6px 6px 7px black;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+
+        @media screen and (max-width: 915px){
+            h2{
+                font-size: 27px;
+            }
+        }
+    </style>
+    
+    <h2>Please choose your penguin</h2>
+    <div id="choose-div">
+        <img src="../images/penguin_slider_images/peng2.png" alt="peng2">
+        <img src="../images/penguin_slider_images/peng3.png" alt="peng3">
+        <img src="../images/penguin_slider_images/peng4.png" alt="peng4">
+        <img src="../images/penguin_slider_images/peng5.png" alt="peng5">
+    </div>
+
+    <script src="../javascript/choosepeng.js" defer></script>
+</body>
+</html>

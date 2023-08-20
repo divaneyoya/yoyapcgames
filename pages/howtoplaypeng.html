@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo_marque.png" type="image/x-icon">
+    <title>How to play</title>
+</head>
+<body>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        h1{
+            font-weight: bold;
+            text-align: center;
+            margin-top: 40px;
+            background: linear-gradient(cyan, blue);
+            color: white;
+            padding: 30px 0;
+            text-shadow: 2px 2px 3px black;
+        }
+
+        #presentation{
+            /* border: 2px solid; */
+            padding: 30px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #part1{
+            /* border: 2px solid; */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #describe{
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 2px black;
+            background: linear-gradient(rgb(160, 211, 59), green);
+            padding: 20px 10px;
+            color: white;
+        }
+
+        body{
+            height: 100vh;
+        }
+
+        #instruction1{
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+        }
+
+        @media screen and (max-width: 915px){
+            #instruction1{
+                flex-direction: column;
+                align-items: center;
+            }
+            h1{
+                font-size: 30px;
+            }
+            #presentation{
+                font-size: 14px;
+            }
+            #describe{
+                font-size: 15px;
+            }
+        }
+    </style>
+
+    <h1>How to play Penguin Slider</h1>
+     <p id="presentation">
+        After launching the game, i.e. after clicking the START button on the game's home screen
+        you'll see a short intro to the Penguin as he glides across the snow.
+        Once the Penguin intro is over, you'll be able to control him throughout the game.
+     </p>
+     <div id="part1">
+           <span id="describe">
+            1- Press the "Up" button on the console to make the penguin jump
+           </span>
+          <div id="instruction1">
+              <img src="../images/penguin_slider_images/C1.png" alt="">
+          </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            2- When faced with an obstacle, you have several options for defending yourself
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C2.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            3- When faced with an obstacle, you can press the '4' key on the console to become a phantom penguin.
+             But when you do this, you won't be able to control the penguin until it returns to normal
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C3.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            4- When you come up against an obstacle, you can press the '2' key on the console to throw a snowball 
+            launch to destroy it. But this won't work with all enemies.
+            Note that all attacks launched in the game will use your 'blue' power
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C4.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            5- When you come up against an obstacle, you can press the '6' button on the console to become a ball
+             to destroy it. Note that this won't work with all ennemies
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C5.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            6- When you come up against an obstacle, you can press the '8' key on the console. This will 
+            activate a shield that will protect you from all enemies, with the exception of two fearsome 
+            enemies: the bear and the morse.
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C6.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            7- When you come up against an obstacle, you can press the 'L' key on the console. This will 
+            activate your super1, which will destroy any ennemy, but will consume a lot of blue energy.
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C7.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            8- When you come up against an obstacle, you can press the 'R' key on the console. This will 
+            activate your super2, which will destroy any ennemy, but will consume much more blue energy.
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C8.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            9- As soon as you see a small rocket pass by in the game, jump quickly to pick it up, as this 
+            will allow you to earn a lot of yoya points that you can use later.
+        </span>
+       <div id="instruction1">
+           <img src="../images/penguin_slider_images/C9.png" alt="">
+       </div>
+     </div>
+     <div id="part1">
+        <span id="describe">
+            10- When you take the little rocket, you'll find yourself high in the clouds, and a little 
+            penguin angel will come and give you random points.
+        </span>
+       <div id="instruction1" style="display: flex;">
+           <img src="../images/penguin_slider_images/C10.png" alt="">
+           <img src="../images/penguin_slider_images/C11.png" alt="">
+       </div>
+     </div>
+
+
+     <script>
+ 
+        setInterval(()=>{  
+
+               let BodyWidth = document.querySelector("body").offsetWidth;
+               let BodyHeight = document.querySelector("body").offsetHeight;
+               let AllImg = document.querySelectorAll("#instruction1 img");
+
+               if(BodyWidth > BodyHeight){
+                   for(let img of AllImg){
+                      img.style["width"] = (BodyWidth/2.4)+'px';
+                      img.style["height"] = (img.offsetWidth/1.6)+'px';
+                   }
+               }else{
+                    for(let img of AllImg){
+                        img.style["width"] = (BodyWidth/1.12)+'px';
+                        img.style["height"] = (img.offsetWidth/1.6)+'px';
+                    }
+               }
+
+        },50)
+     </script>
+
+</body>
+</html>
