@@ -316,11 +316,11 @@ function ImagesAds(){
     let ImagesAndLink = [
         {
             image: "../images_ads/imgad1.png",
-            link: "https://www.youtube.com/"
+            link: "https://www.ysense.com/?rb=139233418"
         },
         {
             image: "../images_ads/imgad2.png",
-            link: "https://www.facebook.com/"
+            link: "https://www.swagbucks.com/p/register?rb=131865674&rp=1"
         }
     ];
 
