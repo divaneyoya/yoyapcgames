@@ -193,7 +193,8 @@ header div button{
     padding: 8px 15px;
     font-size: 20px;
     font-weight: bold;
-    background: linear-gradient(to right, rgb(168, 201, 245), rgb(38, 111, 207));
+    /* background: linear-gradient(to right, rgb(168, 201, 245), rgb(38, 111, 207)); */
+    background: linear-gradient(to right, rgb(243, 177, 139), rgb(207, 43, 2));
     color: white;
     border-radius: 20px;
     box-shadow: 8px 8px 7px rgb(3, 3, 44);

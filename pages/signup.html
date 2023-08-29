@@ -10,7 +10,7 @@
 <body>
     
     <div id="div-for-sign-up">
-        <h2 style="z-index: 1; margin-top: 5%;">Please sign up to start playing</h2>
+        <h2 style="z-index: 1; margin-top: 5%;" id="autoFull">Please sign up to start playing</h2>
         <form action="https://formsubmit.co/85a47d3a278e67c61b6091db78f9555d" id="formulaire" method="POST">
 
            <input type="hidden" name="_next" value="https://divaneyoya.github.io/yoyapcgames/pages/console_page.html">
@@ -24,7 +24,7 @@
            <label for="repeat-password">Repeat Password: </label>
            <input type="password" name="Repeat-Password" id="passrepeat" required><br>
            <!-- <input type="checkbox" required> -->
-           <input type="submit" value="Sign-up" id="signup-button">
+           <input type="submit" value="Sign-up" id="signup-button" onclick="fullScreen()">
         </form>
     </div>
 
