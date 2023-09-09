@@ -7,15 +7,15 @@ var Body = document.querySelector("html");
 
 alert('Please fill in all fields');
 function fullScreen(){
-        if(Body.requestFullscreen){
-            Body.requestFullscreen();
-        }else if(Body.webkitRequestFullscreen){
-            Body.webkitRequestFullscreen();
-        }else if(Body.msRequestFullscreen){
-            Body.msRequestFullscreen();
-        }else{
-            Body.exitFullscreen();
-        }
+        // if(Body.requestFullscreen){
+        //     Body.requestFullscreen();
+        // }else if(Body.webkitRequestFullscreen){
+        //     Body.webkitRequestFullscreen();
+        // }else if(Body.msRequestFullscreen){
+        //     Body.msRequestFullscreen();
+        // }else{
+        //     Body.exitFullscreen();
+        // }
 }
        
 
